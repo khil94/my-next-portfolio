@@ -5,9 +5,20 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="py-20 flex flex-col md:flex-row items-center justify-between gap-10"
+      className="py-20 flex flex-col md:flex-row items-center container mx-auto justify-center gap-10 mt-20"
     >
-      <div className="w-full md:w-1/2 space-y-6">
+      <div className="flex justify-center px-20">
+        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent-primary">
+          <Image
+            src={heroData.profileImage}
+            alt="프로필 이미지"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
+      <div className="w-full space-y-6">
         <h1 className="text-4xl md:text-6xl font-bold gradient-text">
           안녕하세요, <br />
           {heroData.title}{" "}
@@ -27,17 +38,6 @@ const HeroSection = () => {
           >
             {heroData.cta.secondary.text}
           </a>
-        </div>
-      </div>
-      <div className="w-full md:w-1/2 flex justify-center">
-        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent-primary">
-          <Image
-            src={heroData.profileImage}
-            alt="프로필 이미지"
-            fill
-            className="object-cover"
-            priority
-          />
         </div>
       </div>
     </section>
