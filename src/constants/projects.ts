@@ -22,7 +22,7 @@ export const projects: Project[] = [
     Obisidan에서 사용하고 있던 마크다운 기법을 블로그에 그대로 적용시키기 위해 Contentlayer를 사용해서 내부에 자동으로 렌더링되게 제작하였고, 모바일 환경이나 다크모드의 구축을 위해서 처음부터 짠 프로젝트라는 의미가 있었습니다.
     
     다만, 실제로 블로그에 작성하기 위해서는 평소에 쓰는 것보다 훨씬 다듬어 써야 하기 때문에 당초 생각대로 운용하기 힘들었던 점과, Next에 styled-components를 적용시키는 과정에서 시행착오가 많아 아쉽기도 한 프로젝트였습니다.`,
-    image: "/projects/portfolio.jpg",
+    image: "/projects/blog/thumbnail.png",
     tags: [
       "Next",
       "Typescript",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
 
   다만 Scss의 여러 기능들을 충분히 활용하지 못한것은 아쉬움으로 남기도 했습니다. 특히 mixin기능은 적극적으로 활용했으면 생산성을 크게 높일 수 있을 것이라 생각해 더욱 아쉬움이 남습니다.
 `,
-    image: "/projects/ecommerce.jpg",
+    image: "/projects/lolstat/record.png",
     tags: ["React", "Typescript", "SWR", "Axios", "Sass", "Vite"],
     techStack: "React, Redux, Node.js, Express, MongoDB, JWT 인증, Stripe 결제",
     features: [
@@ -81,7 +81,7 @@ export const projects: Project[] = [
  또 이번 서비스도 모바일에서 활용할 일이 많아 모바일-데스크탑 순으로 작업을 하게 되었는데 많은 곳에서 말하는 모바일-데스크탑 순으로 작업을 하라는 말의 의미를 진정으로 알게된 프로젝트이기도 했습니다. 확실히 이전에 급하게 모바일 대응을 하려고 했을떄보다 훨씬 간편하게 데스크탑 대응이 가능했습니다.
     
     `,
-    image: "/projects/weather-app.jpg",
+    image: "/projects/mahjong/main.png",
     tags: [
       "Next",
       "Typescript",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     
     사용기술은 Next + Ts + Tailwind 기반에 유튜브의 자막을 라이브러리를 이용하여 가져오고, 이를 ai를 통해서 요약, 타임라인, 키워드를 받아온 뒤 해당 키워드를 기반으로 관련 영상을 추천했습니다.
     `,
-    image: "/projects/weather-app.jpg",
+    image: "/projects/youtube-summary/detail.png",
     tags: ["Next", "Typescript", "Tailwind", "React", "Cursor"],
     techStack:
       "React Native, JavaScript, Expo, OpenWeatherMap API, Geolocation",

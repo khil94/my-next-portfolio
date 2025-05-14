@@ -12,9 +12,9 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  title: "개발자 포트폴리오 | 홍길동",
-  description: "프론트엔드 개발자 홍길동의 포트폴리오 웹사이트입니다.",
-  author: "홍길동",
+  title: "개발자 포트폴리오 | 김효일",
+  description: "프론트엔드 개발자 김효일의 포트폴리오 웹사이트입니다.",
+  author: "김효일",
   keywords: ["웹 개발자", "프론트엔드", "리액트", "넥스트JS", "포트폴리오"],
   url: "https://your-portfolio.com",
   logoText: "포트폴리오",
