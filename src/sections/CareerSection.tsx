@@ -3,7 +3,7 @@ import { careerItems } from "@/constants/career";
 const CareerSection = () => {
   return (
     <section id="career" className="py-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">
           <span className="gradient-text">커리어</span>
         </h2>

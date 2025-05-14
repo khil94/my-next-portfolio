@@ -18,7 +18,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="py-20 bg-main-light-black">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">
           <span className="gradient-text">프로젝트</span>
         </h2>

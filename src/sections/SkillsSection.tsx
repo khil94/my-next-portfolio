@@ -3,7 +3,7 @@ import { skillCategories } from "@/constants/skills";
 const SkillsSection = () => {
   return (
     <section id="skills" className="py-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16">
           <span className="gradient-text">기술 스택</span>
         </h2>

@@ -4,13 +4,12 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="py-20 flex flex-col md:flex-row items-center container mx-auto justify-center gap-10 mt-20"
+      className="py-20 flex flex-col md:flex-row items-center container mx-auto justify-center gap-10 mt-20 px-4"
     >
-      <div className="w-full space-y-6">
-        <h1 className="text-4xl md:text-6xl font-bold gradient-text leading-20">
+      <div className="w-full md:w-1/2 space-y-6 px-4">
+        <h1 className="text-4xl md:text-6xl font-bold gradient-text">
           안녕하세요, <br />
-          {heroData.title}
-          <br />
+          {heroData.title}{" "}
           <span className="text-accent-primary">{heroData.name}</span>입니다
         </h1>
         <p className="text-lg text-neutral-400">{heroData.description}</p>

@@ -3,13 +3,13 @@ import { contactInfo, socialLinks } from "@/constants/contact";
 const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-main-light-black">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-4xl px-4">
         <h2 className="text-4xl font-bold text-center mb-16">
           <span className="gradient-text">{contactInfo.sectionTitle}</span>
         </h2>
 
         <div className="space-y-6">
-          <div className="space-y-4 flex flex-row gap-10">
+          <div className="space-y-4 flex flex-col md:flex-row justify-center gap-10">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full flex items-center justify-center bg-accent-primary/20 text-accent-primary">
                 📧
@@ -51,7 +51,7 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="pt-6">
+          <div className="pt-6 flex flex-col items-center">
             <h4 className="text-lg font-medium mb-4">소셜 미디어</h4>
             <div className="flex gap-4">
               {socialLinks.map((link, index) => (
