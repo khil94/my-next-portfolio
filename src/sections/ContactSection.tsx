@@ -1,4 +1,4 @@
-import { contactInfo, socialLinks } from "@/constants/contact";
+import { contactInfo } from "@/constants/contact";
 
 const ContactSection = () => {
   return (
@@ -49,22 +49,14 @@ const ContactSection = () => {
                 <p>{contactInfo.location}</p>
               </div>
             </div>
-          </div>
-
-          <div className="pt-6 flex flex-col items-center">
-            <h4 className="text-lg font-medium mb-4">소셜 미디어</h4>
-            <div className="flex gap-4">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full flex items-center justify-center bg-neutral-800 hover:bg-accent-primary transition-colors"
-                >
-                  {link.name[0]}
-                </a>
-              ))}
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full flex items-center justify-center bg-accent-primary/20 text-accent-primary">
+                G
+              </div>
+              <div>
+                <p className="text-sm text-neutral-400">위치</p>
+                <p>{contactInfo.github}</p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { contactInfo, socialLinks } from "@/constants/contact";
+import { contactInfo } from "@/constants/contact";
 import { navItems } from "@/constants/navigation";
 import { siteConfig } from "@/constants/site";
 import Link from "next/link";
@@ -65,6 +65,15 @@ const Footer = () => {
                 <span>📍</span>
                 <span>{contactInfo.location}</span>
               </li>
+              <li className="flex items-center gap-2 text-neutral-400">
+                <span>G</span>
+                <a
+                  href={`${contactInfo.github}`}
+                  className="hover:text-accent-primary transition-colors"
+                >
+                  {contactInfo.github}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -73,19 +82,6 @@ const Footer = () => {
           <p className="text-neutral-500 text-sm">
             &copy; {currentYear} {siteConfig.footer.copyright}
           </p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-500 hover:text-accent-primary transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>
