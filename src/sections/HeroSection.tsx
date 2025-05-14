@@ -19,9 +19,10 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="w-full space-y-6">
-        <h1 className="text-4xl md:text-6xl font-bold gradient-text">
+        <h1 className="text-4xl md:text-6xl font-bold gradient-text leading-20">
           안녕하세요, <br />
-          {heroData.title}{" "}
+          {heroData.title}
+          <br />
           <span className="text-accent-primary">{heroData.name}</span>입니다
         </h1>
         <p className="text-lg text-neutral-400">{heroData.description}</p>
