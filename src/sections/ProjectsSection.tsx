@@ -69,17 +69,6 @@ const ProjectsSection = () => {
                     GitHub
                   </a>
                 )}
-                {project.links.demo && (
-                  <a
-                    href={project.links.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-neutral-800 text-neutral-200 hover:bg-accent-primary transition-colors"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    데모
-                  </a>
-                )}
                 {project.links.website && (
                   <a
                     href={project.links.website}
