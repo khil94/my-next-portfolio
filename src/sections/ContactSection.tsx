@@ -3,7 +3,7 @@ import { contactInfo } from "@/constants/contact";
 const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-main-light-black">
-      <div className="container mx-auto max-w-4xl px-4">
+      <div className="container mx-auto w-full px-4">
         <h2 className="text-4xl font-bold text-center mb-16">
           <span className="gradient-text">{contactInfo.sectionTitle}</span>
         </h2>
@@ -54,7 +54,7 @@ const ContactSection = () => {
                 G
               </div>
               <div>
-                <p className="text-sm text-neutral-400">위치</p>
+                <p className="text-sm text-neutral-400">Github</p>
                 <p>{contactInfo.github}</p>
               </div>
             </div>
