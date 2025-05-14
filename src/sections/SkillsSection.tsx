@@ -8,25 +8,20 @@ const SkillsSection = () => {
           <span className="gradient-text">기술 스택</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="space-y-16">
           {skillCategories.map((category, index) => (
-            <div key={index} className="modern-card">
-              <h3 className="text-2xl font-semibold mb-6 text-accent-primary">
+            <div key={index} className="space-y-6">
+              <h3 className="text-2xl font-semibold text-accent-primary border-b border-accent-primary/30 pb-2">
                 {category.title}
               </h3>
-              <div className="space-y-6">
+
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="font-medium">{skill.name}</span>
-                      <span className="text-neutral-400">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
-                      <div
-                        className="bg-gradient-to-r from-accent-primary to-accent-tertiary h-2.5 rounded-full"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                  <div
+                    key={skillIndex}
+                    className="px-4 py-2 bg-main-light-black rounded-lg border border-neutral-700 hover:border-accent-primary transition-colors"
+                  >
+                    <span className="text-neutral-200">{skill.name}</span>
                   </div>
                 ))}
               </div>
