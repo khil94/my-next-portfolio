@@ -114,7 +114,7 @@ export const projects: Project[] = [
 
     최근 회사 사이트의 외주를 받은 것에 영감을 받아 회사 소개 사이트 처럼 자신의 포트폴리오를 만들어 보는 것은 어떤가 하는 생각에 디자인하였습니다.
     `,
-    image: "/projects/weather-app.jpg",
+    image: "/projects/portfolio/main.png",
     tags: ["Next", "Typescript", "Tailwind CSS", "React"],
     techStack:
       "React Native, JavaScript, Expo, OpenWeatherMap API, Geolocation",
