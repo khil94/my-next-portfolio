@@ -110,7 +110,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
             {/* 추가 상세 내용은 project 객체에 추가 필드가 있다면 표시할 수 있습니다 */}
             {project.longDescription && (
-              <p className="text-neutral-300 leading-relaxed">
+              <p className="text-neutral-300 leading-relaxed whitespace-pre-wrap">
                 {project.longDescription}
               </p>
             )}
@@ -124,14 +124,6 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
-              </div>
-            )}
-
-            {/* 사용 기술 - 프로젝트 상세 정보에 techStack이 있다면 표시 */}
-            {project.techStack && (
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold">사용 기술</h3>
-                <p className="text-neutral-300">{project.techStack}</p>
               </div>
             )}
           </div>
