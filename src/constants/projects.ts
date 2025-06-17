@@ -14,6 +14,35 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "1분 일기",
+    description: "v0.dev를 이용해 디자인한 일기작성 웹 서비스 입니다.",
+    longDescription: `사용자가 하루의 회고를 간단하게 200자 내외로 작성하면, 이를 ai를 통해 분석하여 위로의 말이나 도움이 되는 피드백을 사용자에게 전달하는 웹 서비스 입니다.
+    shadcn을 통하여 통일감 있는 디자인을 하였으며, 전반적인 스타일링은 v0를 통해 만들었습니다. 디자인에 자신이 없는 편이었는데, 이런 ai 툴들을 통해 비약적으로 훌륭한 디자인이 가능함을 확인할 수 있는 계기가 됐습니다.
+    또 next-pwa를 통하여 pwa 기술을 적용하였습니다. 다만, 네이티브 기능을 적용하지 못하는 문제가 있어 많은 기능을 담지는 못하였습니다.`,
+    image: "/projects/diary/thumbnail.png",
+    tags: [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "React",
+      "zustand",
+      "v0.dev",
+      "shadcn",
+    ],
+    techStack:
+      "Next.js, React, TypeScript, Tailwind CSS, Framer Motion, zustand",
+    features: [
+      `v0와 shadcn을 통한 스타일링을 테스트 하기 위한 웹 서비스`,
+      `Next + tailwind css 기반으로 제작`,
+      `gemini ai 와 연동, 사용자의 회고를 분석하는 기능`,
+      `next-pwa를 통한 서비스의 pwa화`,
+    ],
+    links: {
+      github: "https://github.com/khil94/5min-diary",
+      website: "https://1min-diary.vercel.app/",
+    },
+  },
+  {
     title: "개인블로그",
     description:
       "Contentlayer를 사용하여 만든 개인적으로 개발관련 글을 정리하기 위해 만든 블로그입니다.",
@@ -24,14 +53,14 @@ export const projects: Project[] = [
     다만, 실제로 블로그에 작성하기 위해서는 평소에 쓰는 것보다 훨씬 다듬어 써야 하기 때문에 당초 생각대로 운용하기 힘들었던 점과, Next에 styled-components를 적용시키는 과정에서 시행착오가 많아 아쉽기도 한 프로젝트였습니다.`,
     image: "/projects/blog/thumbnail.png",
     tags: [
-      "Next",
+      "Next.js",
       "Typescript",
       "Styled-components",
       "React",
       "Contentlayer",
       "React-redux",
     ],
-    techStack: "Next.js, React, TypeScript, Tailwind CSS, Framer Motion",
+    techStack: "Next.js, React, TypeScript, Styled-components, React-redux",
     features: [
       `개인적으로 개발관련 글을 정리하기 위해 만든 블로그`,
       `Next + Styled-components + contentlayer 기반으로 제작`,
