@@ -53,6 +53,32 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     setSelectedImage(image);
   };
 
+  // 이전 이미지로 이동
+  const goToPreviousImage = () => {
+    if (!project?.additionalImages) return;
+
+    const currentIndex = project.additionalImages.indexOf(selectedImage!);
+    const previousIndex =
+      currentIndex === 0
+        ? project.additionalImages.length - 1
+        : currentIndex - 1;
+
+    setSelectedImage(project.additionalImages[previousIndex]);
+  };
+
+  // 다음 이미지로 이동
+  const goToNextImage = () => {
+    if (!project?.additionalImages) return;
+
+    const currentIndex = project.additionalImages.indexOf(selectedImage!);
+    const nextIndex =
+      currentIndex === project.additionalImages.length - 1
+        ? 0
+        : currentIndex + 1;
+
+    setSelectedImage(project.additionalImages[nextIndex]);
+  };
+
   // 이미지 모달 외부 클릭 처리
   const handleImageModalBackdropClick = (event: React.MouseEvent) => {
     if (event.target === event.currentTarget) {
@@ -243,6 +269,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             onClick={handleImageModalBackdropClick}
           >
             <div className="relative max-w-4xl max-h-[90vh]">
+              {/* 닫기 버튼 */}
               <button
                 onClick={() => setSelectedImage(null)}
                 className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-main-black/50 flex items-center justify-center text-neutral-300 hover:bg-accent-primary transition-colors"
@@ -262,6 +289,56 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                   />
                 </svg>
               </button>
+
+              {/* 이전 버튼 */}
+              {project?.additionalImages &&
+                project.additionalImages.length > 1 && (
+                  <button
+                    onClick={goToPreviousImage}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-main-black/50 flex items-center justify-center text-neutral-300 hover:bg-accent-primary transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 19l-7-7 7-7"
+                      />
+                    </svg>
+                  </button>
+                )}
+
+              {/* 다음 버튼 */}
+              {project?.additionalImages &&
+                project.additionalImages.length > 1 && (
+                  <button
+                    onClick={goToNextImage}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-main-black/50 flex items-center justify-center text-neutral-300 hover:bg-accent-primary transition-colors"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                )}
+
+              {/* 이미지 */}
               <Image
                 src={selectedImage}
                 alt="확대된 이미지"
@@ -269,6 +346,24 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 height={600}
                 className="rounded-lg object-contain max-h-[80vh]"
               />
+
+              {/* 이미지 인디케이터 */}
+              {project?.additionalImages &&
+                project.additionalImages.length > 1 && (
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
+                    {project.additionalImages.map((image, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setSelectedImage(image)}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          image === selectedImage
+                            ? "bg-accent-primary"
+                            : "bg-neutral-500 hover:bg-neutral-400"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
             </div>
           </div>,
           document.body
