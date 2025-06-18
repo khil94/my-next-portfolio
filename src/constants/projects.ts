@@ -3,10 +3,12 @@ export type Project = {
   description: string;
   longDescription?: string;
   image: string;
+  additionalImages?: string[];
   tags: string[];
   techStack?: string;
   features?: string[];
   links: {
+    demo?: string;
     github?: string;
     website?: string;
   };
@@ -37,6 +39,15 @@ export const projects: Project[] = [
       `gemini ai 와 연동, 사용자의 회고를 분석하는 기능`,
       `next-pwa를 통한 서비스의 pwa화`,
     ],
+    additionalImages: [
+      "/projects/diary/main.png",
+      "/projects/diary/thumbnail.png",
+      "/projects/diary/weekly.png",
+      "/projects/diary/monthly.png",
+      "/projects/diary/achievement_1.png",
+      "/projects/diary/achievement_2.png",
+      "/projects/diary/settings.png",
+    ],
     links: {
       github: "https://github.com/khil94/5min-diary",
       website: "https://1min-diary.vercel.app/",
@@ -52,6 +63,11 @@ export const projects: Project[] = [
     
     다만, 실제로 블로그에 작성하기 위해서는 평소에 쓰는 것보다 훨씬 다듬어 써야 하기 때문에 당초 생각대로 운용하기 힘들었던 점과, Next에 styled-components를 적용시키는 과정에서 시행착오가 많아 아쉽기도 한 프로젝트였습니다.`,
     image: "/projects/blog/thumbnail.png",
+    additionalImages: [
+      "/projects/blog/thumbnail.png",
+      "/projects/blog/dark_desktop.png",
+      "/projects/blog/dark_mobile.png",
+    ],
     tags: [
       "Next.js",
       "Typescript",
@@ -85,6 +101,11 @@ export const projects: Project[] = [
   다만 Scss의 여러 기능들을 충분히 활용하지 못한것은 아쉬움으로 남기도 했습니다. 특히 mixin기능은 적극적으로 활용했으면 생산성을 크게 높일 수 있을 것이라 생각해 더욱 아쉬움이 남습니다.
 `,
     image: "/projects/lolstat/record.png",
+    additionalImages: [
+      "/projects/lolstat/record.png",
+      "/projects/lolstat/find_duo.png",
+      "/projects/lolstat/expired_duo.png",
+    ],
     tags: ["React", "Typescript", "SWR", "Axios", "Sass", "Vite"],
     techStack: "React, Redux, Node.js, Express, MongoDB, JWT 인증, Stripe 결제",
     features: [
@@ -111,6 +132,12 @@ export const projects: Project[] = [
     
     `,
     image: "/projects/mahjong/main.png",
+    additionalImages: [
+      "/projects/mahjong/main.png",
+      "/projects/mahjong/chart.png",
+      "/projects/mahjong/personal_chart.png",
+      "/projects/mahjong/record_result.png",
+    ],
     tags: [
       "Next",
       "Typescript",
@@ -144,6 +171,7 @@ export const projects: Project[] = [
     최근 회사 사이트의 외주를 받은 것에 영감을 받아 회사 소개 사이트 처럼 자신의 포트폴리오를 만들어 보는 것은 어떤가 하는 생각에 디자인하였습니다.
     `,
     image: "/projects/portfolio/main.png",
+    additionalImages: ["/projects/portfolio/main.png"],
     tags: ["Next", "Typescript", "Tailwind CSS", "React"],
     techStack:
       "React Native, JavaScript, Expo, OpenWeatherMap API, Geolocation",
@@ -171,6 +199,10 @@ export const projects: Project[] = [
     사용기술은 Next + Ts + Tailwind 기반에 유튜브의 자막을 라이브러리를 이용하여 가져오고, 이를 ai를 통해서 요약, 타임라인, 키워드를 받아온 뒤 해당 키워드를 기반으로 관련 영상을 추천했습니다.
     `,
     image: "/projects/youtube-summary/detail.png",
+    additionalImages: [
+      "/projects/youtube-summary/main.png",
+      "/projects/youtube-summary/detail.png",
+    ],
     tags: ["Next", "Typescript", "Tailwind", "React", "Cursor"],
     techStack:
       "React Native, JavaScript, Expo, OpenWeatherMap API, Geolocation",
