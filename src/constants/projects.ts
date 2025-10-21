@@ -214,4 +214,40 @@ export const projects: Project[] = [
     ],
     links: {},
   },
+  {
+    title: "구글 달력 연동 어플리케이션",
+    description: "flutter 기반 google 연동 어플리케이션",
+    longDescription: `flutter 학습 용도로 만든 간단한 google 연동 어플리케이션 입니다.
+
+    flutter + freezed + provider 환경에 google 서비스를 접목시켜 사용자의 달력 정보를 간단히 표기하는 단순한 서비스 입니다.
+
+    google 로그인 및 api 관리를 위해 google_sign_in, extension_google_sign_in_as_googleapis_auth, googleapis 등을 사용했으며, cupertino_icons를 조금 사용했습니다.
+    
+    flutter의 기초를 학습하자마자 바로 진행한터라, 많은 부분에서 막혔지만 생각보다는 원활하게 진행된 프로젝트 입니다.
+
+    주로 에뮬레이터 설정과 java 버전 핸들리에서 문제가 발생했고, google 로그인 및 api 연동에도 많은 어려움을 겪었습니다.
+
+    flutter의 패키지명 변경 라이브러리를 사용했지만 부분적으로 변경되지 않아 시간이 소요되거나, 현재 자바 버전과 google관련 패키지와의 호환성 문제 때문에 오류가 발생하거나, 하는 부분에서 문제가 많이 발생했습니다.
+
+    또 calendar api를 통해 가져오는 정보에 참석자 사용자 이름이 포함되어 있지 않거나, timezone 문제로 곤란을 겪기도 했습니다.
+
+    결론적으로는 api 연동 및 사용자 달력 일정을 간단히 표기하는 선에서 멈춘 서비스지만, flutter의 기술을 시범적으로 써보는 프로젝트로는 적절했다고 생각합니다.`,
+    image: "/projects/pathfinder/3.png",
+    tags: ["flutter", "v0.dev", "dart"],
+    techStack: "flutter, dart, provider",
+    features: [
+      `flutter 학습용 토이 프로젝트`,
+      `순수 flutter 기반으로 작성`,
+      `google api와 연동, 사용자의 google계정의 달력 정보를 불러옴`,
+    ],
+    additionalImages: [
+      "/projects/pathfinder/1.png",
+      "/projects/pathfinder/2.png",
+      "/projects/pathfinder/3.png",
+      "/projects/pathfinder/4.png",
+    ],
+    links: {
+      github: "https://github.com/khil94/pathfinder",
+    },
+  },
 ];
