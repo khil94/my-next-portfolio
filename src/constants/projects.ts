@@ -16,6 +16,82 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Github Viewer",
+    description: "Next.js 기반 Github profile viewer ",
+    longDescription: `Next.js 기반으로 만든 Github Profile Viewer 서비스입니다.
+
+    Github REST API, Github GraphQL 을 사용하여 사용자의 정보를 가져와 간단하게 가공한 후 보여 주는 것이 주안점입니다.
+
+    사용 스택으로는 Next.js,TailwindCSS, Recharts, zustand 를 사용하였습니다.
+    레이아웃 디자인은 v0.dev와 ai를 통해서 하였는데, shadcn 기반의 디자인이라 다소 어레인지를 하여 적용을 하였습니다.
+
+    사용자 명을 통한 검색/사용자의 상세 정보/사용자간 궁합 기능/북마크 기능을 구현했는데,
+    API로 가져오는 정보를 최소화 하려고 하다보니 아무래도 정확도가 떨어지는 부분이 있었습니다.
+
+    이를테면 궁합 기능과 사용자 상세 정보의 내용은 굉장히 간략하게 보여주고 있는데, 매우 상세하게 보여주기 위해서는 방대한 양의 데이터를 다뤄야 했기 때문입니다.
+    본 사이트는 어디까지나 가볍게 보는 것을 주안점으로 삼고 있으므로, 사이트의 성격에 맞지 않다 생각하여 가져오는 정보를 최소화 하고, 보여주는 정보도 임의로 가공하여 보여주고 있습니다.
+
+    zustand로 테마/북마크/최근본유저 를 관리하였는데, 최근본유저는 추후에 사용할 예정이었으나 폐기되어 zustand로 관리하기에는 다소 맞지 않는 상황이 되긴 했습니다.
+    
+    `,
+    image: "/projects/githubViewer/3.png",
+    tags: ["Next", "Typescript", "Tailwind", "React", "Zustand", "Github"],
+    techStack: "React, Next, Tailwind, Typescript, Zustand",
+    features: [
+      `Next.js 기반 웹 서비스`,
+      `Github api와 연동, github 사용자의 정보를 가져옴`,
+      `Github 사용자검색/상세정보/궁합 기능`,
+    ],
+    additionalImages: [
+      "/projects/githubViewer/1.png",
+      "/projects/githubViewer/2.png",
+      "/projects/githubViewer/3.png",
+      "/projects/githubViewer/4.png",
+      "/projects/githubViewer/5.png",
+      "/projects/githubViewer/6.png",
+    ],
+    links: {
+      github: "https://github.com/khil94/github-profile-viewer",
+      website: "https://github-profile-viewer-virid-sigma.vercel.app/",
+    },
+  },
+  {
+    title: "구글 달력 연동 어플리케이션",
+    description: "flutter 기반 google 연동 어플리케이션",
+    longDescription: `flutter 학습 용도로 만든 간단한 google 연동 어플리케이션 입니다.
+
+    flutter + freezed + provider 환경에 google 서비스를 접목시켜 사용자의 달력 정보를 간단히 표기하는 단순한 서비스 입니다.
+
+    google 로그인 및 api 관리를 위해 google_sign_in, extension_google_sign_in_as_googleapis_auth, googleapis 등을 사용했으며, cupertino_icons를 조금 사용했습니다.
+    
+    flutter의 기초를 학습하자마자 바로 진행한터라, 많은 부분에서 막혔지만 생각보다는 원활하게 진행된 프로젝트 입니다.
+
+    주로 에뮬레이터 설정과 java 버전 핸들리에서 문제가 발생했고, google 로그인 및 api 연동에도 많은 어려움을 겪었습니다.
+
+    flutter의 패키지명 변경 라이브러리를 사용했지만 부분적으로 변경되지 않아 시간이 소요되거나, 현재 자바 버전과 google관련 패키지와의 호환성 문제 때문에 오류가 발생하거나, 하는 부분에서 문제가 많이 발생했습니다.
+
+    또 calendar api를 통해 가져오는 정보에 참석자 사용자 이름이 포함되어 있지 않거나, timezone 문제로 곤란을 겪기도 했습니다.
+
+    결론적으로는 api 연동 및 사용자 달력 일정을 간단히 표기하는 선에서 멈춘 서비스지만, flutter의 기술을 시범적으로 써보는 프로젝트로는 적절했다고 생각합니다.`,
+    image: "/projects/pathfinder/3.png",
+    tags: ["flutter", "v0.dev", "dart"],
+    techStack: "flutter, dart, provider",
+    features: [
+      `flutter 학습용 토이 프로젝트`,
+      `순수 flutter 기반으로 작성`,
+      `google api와 연동, 사용자의 google계정의 달력 정보를 불러옴`,
+    ],
+    additionalImages: [
+      "/projects/pathfinder/1.png",
+      "/projects/pathfinder/2.png",
+      "/projects/pathfinder/3.png",
+      "/projects/pathfinder/4.png",
+    ],
+    links: {
+      github: "https://github.com/khil94/pathfinder",
+    },
+  },
+  {
     title: "1분 일기",
     description: "v0.dev를 이용해 디자인한 일기작성 웹 서비스 입니다.",
     longDescription: `사용자가 하루의 회고를 간단하게 200자 내외로 작성하면, 이를 ai를 통해 분석하여 위로의 말이나 도움이 되는 피드백을 사용자에게 전달하는 웹 서비스 입니다.
@@ -213,41 +289,5 @@ export const projects: Project[] = [
       `라이브러리 문제로 배포는 하지 않음`,
     ],
     links: {},
-  },
-  {
-    title: "구글 달력 연동 어플리케이션",
-    description: "flutter 기반 google 연동 어플리케이션",
-    longDescription: `flutter 학습 용도로 만든 간단한 google 연동 어플리케이션 입니다.
-
-    flutter + freezed + provider 환경에 google 서비스를 접목시켜 사용자의 달력 정보를 간단히 표기하는 단순한 서비스 입니다.
-
-    google 로그인 및 api 관리를 위해 google_sign_in, extension_google_sign_in_as_googleapis_auth, googleapis 등을 사용했으며, cupertino_icons를 조금 사용했습니다.
-    
-    flutter의 기초를 학습하자마자 바로 진행한터라, 많은 부분에서 막혔지만 생각보다는 원활하게 진행된 프로젝트 입니다.
-
-    주로 에뮬레이터 설정과 java 버전 핸들리에서 문제가 발생했고, google 로그인 및 api 연동에도 많은 어려움을 겪었습니다.
-
-    flutter의 패키지명 변경 라이브러리를 사용했지만 부분적으로 변경되지 않아 시간이 소요되거나, 현재 자바 버전과 google관련 패키지와의 호환성 문제 때문에 오류가 발생하거나, 하는 부분에서 문제가 많이 발생했습니다.
-
-    또 calendar api를 통해 가져오는 정보에 참석자 사용자 이름이 포함되어 있지 않거나, timezone 문제로 곤란을 겪기도 했습니다.
-
-    결론적으로는 api 연동 및 사용자 달력 일정을 간단히 표기하는 선에서 멈춘 서비스지만, flutter의 기술을 시범적으로 써보는 프로젝트로는 적절했다고 생각합니다.`,
-    image: "/projects/pathfinder/3.png",
-    tags: ["flutter", "v0.dev", "dart"],
-    techStack: "flutter, dart, provider",
-    features: [
-      `flutter 학습용 토이 프로젝트`,
-      `순수 flutter 기반으로 작성`,
-      `google api와 연동, 사용자의 google계정의 달력 정보를 불러옴`,
-    ],
-    additionalImages: [
-      "/projects/pathfinder/1.png",
-      "/projects/pathfinder/2.png",
-      "/projects/pathfinder/3.png",
-      "/projects/pathfinder/4.png",
-    ],
-    links: {
-      github: "https://github.com/khil94/pathfinder",
-    },
   },
 ];
