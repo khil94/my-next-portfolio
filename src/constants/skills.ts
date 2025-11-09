@@ -16,6 +16,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "TypeScript" },
       { name: "React" },
       { name: "HTML/CSS" },
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
     ],
   },
   {
@@ -23,12 +25,11 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "React Native" },
       { name: "AWS" },
-      { name: "Sass" },
-      { name: "Tailwind CSS" },
       { name: "React-Query" },
       { name: "Styled-Components" },
       { name: "React-Redux" },
       { name: "Axios" },
+      { name: "Zustand" },
     ],
   },
   {
